@@ -11,16 +11,18 @@
 </head>
 <body>
   <h1>Word Guess 2019!</h1>
-  <h2>See if you can guess these hot words from 2019!</h2>
+  <h2>See if you can guess these hot words from 2019! Press a letter to guess!</h2>
   <div id="word-div">
 
   </div>
-  <div id="guess-div"></div>
+  <div id="guess-div">
+
+  </div>
   <script type="text/javascript">
 
     var words = [{answer: 'trump'}, {answer: 'amazon'}, {answer: 'shooting'}, {answer: 'hurricane'}, {answer: 'russia'}];
 
-    var comAnswer;
+    var compAnswer;
 
     var userGuesses = [];
 
@@ -32,13 +34,15 @@
 
     function wordSelect(){
       compAnswer = words[Math.floor(Math.random() * Math.floor(words.length))].answer;
+      console.log(compAnswer);
+      $('#word-div').text(compAnswer);
     }
 
+    function updateStats() {
 
+    }
 
     wordSelect();
-
-    console.log(compAnswer);
 
   </script>
 </body>
