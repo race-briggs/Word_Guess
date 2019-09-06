@@ -17,8 +17,28 @@
   </div>
   <div id="guess-div"></div>
   <script type="text/javascript">
-    
 
+    var words = [{answer: 'trump'}, {answer: 'amazon'}, {answer: 'shooting'}, {answer: 'hurricane'}, {answer: 'russia'}];
+
+    var comAnswer;
+
+    var userGuesses = [];
+
+    var remainingGuesses = 9;
+
+    var wins = 0;
+
+    var losses = 0;
+
+    function wordSelect(){
+      compAnswer = words[Math.floor(Math.random() * Math.floor(words.length))].answer;
+    }
+
+
+
+    wordSelect();
+
+    console.log(compAnswer);
 
   </script>
 </body>
